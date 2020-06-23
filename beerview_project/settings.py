@@ -25,7 +25,8 @@ SECRET_KEY = 'vo%g4j68-8d1s!jiyle-(^xx+t3%y676#z3a+*comegbm81q-!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0', 'localhost']
+ALLOWED_HOSTS = []
+# ['0.0.0.0', 'localhost']
 
 
 # Application definition
@@ -37,8 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'beerview',
-    'rest_framework'
+    'rest_framework',
+    'beerview'
 ]
 
 MIDDLEWARE = [
@@ -120,7 +121,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSIONS_CLASSES' : [
