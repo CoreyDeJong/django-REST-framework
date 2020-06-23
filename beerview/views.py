@@ -8,5 +8,6 @@ class PostsList(ListCreateAPIView):
     serializer_class = PostSerializer
 
 class PostsDetail(RetrieveUpdateDestroyAPIView):
+    permission_classes = (IsAuthorOrReadOnly,)
     queryset = Beer.objects.all()
     serializer_class = PostSerializer

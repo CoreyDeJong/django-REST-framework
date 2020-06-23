@@ -3,7 +3,7 @@ from django.test import TestCase
 
 from .models import Beer
 
-class PostModelTests(TestCase):
+class BeerModelTests(TestCase):
 
     @classmethod
     def setUpTestData(cls):
@@ -18,9 +18,11 @@ class PostModelTests(TestCase):
         test_beer.save()
 
     def test_beer_content(self):
-        post = Beer.objects.get(id=1)
-        
+        beer = Beer.objects.get(id=1)
+        expected_author = f'{beer.author}'
+        expected_title = f'{beer.title}'
+        expected_body = f'{beer.body}'
 
-        self.assertEqual(str(post.author), 'tester')
-        self.assertEqual(post.title, 'Title of Beer')
-        self.assertEqual(post.body, 'Words about da beerz')
+        self.assertEqual(str(beer.author), 'tester')
+        self.assertEqual(beer.title, 'Title of Beer')
+        self.assertEqual(beer.body, 'Words about da beerz')
