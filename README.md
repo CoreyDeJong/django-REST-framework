@@ -1,1 +1,1 @@
-https://github.com/CoreyDeJong/django-REST-framework/pull/6
+https://github.com/CoreyDeJong/django-REST-framework/pull/8
